@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+
+    <h2>Add Job Posting</h2>
+    <form method="post">
+        <label for="job_title">Job Title:</label>
+        <input type="text" id="job_title" name="job_title" required><br>
+
+        <label for="job_description">Job Description:</label>
+        <textarea id="job_description" name="job_description" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Job Applications</h2>
+    {% for application in applications %}
+    <div>
+        <h3>{{ application[0] }}</h3>
+        <p>Applicant Name: {{ application[1] }}</p>
+        <a href="{{ url_for('download_resume', resume_data=application[2]) }}">Download Resume</a>
+    </div>
+    {% endfor %}
+
+    <p><a href="{{ url_for('logout') }}">Logout</a></p>
+</body>
+</html>
