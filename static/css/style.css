@@ -9,3 +9,79 @@ background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, F
   margin-top: 60px;
   color: antiquewhite;
 }
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.user_page_body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header styles */
+.user_page_header {
+  background-color: #333;
+  padding: 1rem;
+}
+
+nav a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* Main content styles */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user_page_h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.user_page_job_listings {
+  list-style: none;
+}
+
+.user_page_job_card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.user_page_job_card h2 {
+  margin-bottom: 1rem;
+}
+
+.user_page_apply_btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.apply-btn:hover {
+  background-color: #555;
+}
+
+/* Footer styles */
+.user_page_footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}

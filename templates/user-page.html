@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -29,5 +29,46 @@
 {% endif %}
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Postings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="user_page">
+    <header class="user_page_header">
+        <nav>
+            <a class="" href="/login">Admin Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="user_page_h1">Job Postings</h1>
+        {% if job_postings %}
+            <ul class="user_page_job_listings">
+                {% for posting in job_postings %}
+                <li class="user_page_job_card">
+                    <h2>{{ posting.job_title }}</h2>
+                    <p><strong>About the Job:</strong> {{ posting.about_job }}</p>
+                    <p><strong>Role Responsibilities:</strong> {{ posting.role_responsibilities }}</p>
+                    <p><strong>Requirements:</strong> {{ posting.requirements }}</p>
+                    <p><strong>Skills:</strong> {{ posting.skills }}</p>
+                    <a href="#" class="user_page_apply_btn">Apply Now</a>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No job postings available.</p>
+        {% endif %}
+    </main>
+
+    <footer class="user_page_footer">
+        <p>&copy; 2023 Your Company Name</p>
+    </footer>
 </body>
 </html>
